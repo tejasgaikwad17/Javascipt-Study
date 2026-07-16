@@ -75,4 +75,31 @@
 ### Non-Primitive (Reference) Data Type
     1. Object
     Arrays and functions are also objects in JavaScript.
-  
+
+### Type Conversion (Conversion Operations)
+
+## What is Type Conversion?
+    Type Conversion means changing a value from one data type to another.
+    
+    For example:
+    1. String  ➝ Number
+    2. Number  ➝ String
+    3. Boolean ➝ Number
+
+    P1 - let age = "23";
+         let convertedAge = Number(age);
+         console.log(convertedAge); //23
+         console.log(typeof convertedAge); //Number
+
+## Types of Conversion
+
+    There are 2 types:
+    1. Implicit Type Conversion (Type Coercion) → JavaScript does it automatically.
+    2. Explicit Type Conversion → You do it manually.
+
+    1.1. Invalid String ➝ Number
+
+    let age = "25abc";
+    let convertedAge = Number(age);
+    console.log(convertedAge);
+    console.log(typeof convertedAge);
