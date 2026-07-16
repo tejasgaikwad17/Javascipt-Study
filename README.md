@@ -76,9 +76,9 @@
     1. Object
     Arrays and functions are also objects in JavaScript.
 
-### Type Conversion (Conversion Operations)
+## Type Conversion (Conversion Operations)
 
-## What is Type Conversion?
+### What is Type Conversion?
     Type Conversion means changing a value from one data type to another.
     
     For example:
@@ -91,7 +91,7 @@
          console.log(convertedAge); //23
          console.log(typeof convertedAge); //Number
 
-## Types of Conversion
+### Types of Conversion
 
     There are 2 types:
     1. Implicit Type Conversion (Type Coercion) → JavaScript does it automatically.
@@ -103,3 +103,122 @@
     let convertedAge = Number(age);
     console.log(convertedAge);
     console.log(typeof convertedAge);
+
+## Operators 
+   
+### What is an Operator?
+    An operator is a symbol that performs an operation on one or more operands (values or variables).
+
+### Types of Operators
+
+    JavaScript has the following main types:
+    1. Arithmetic Operators
+    2. Assignment Operators
+    3. Comparison Operators
+    4. Logical Operators
+    5. Increment & Decrement Operators
+    6. String Operators
+    7. Ternary Operator
+    8. Nullish Coalescing Operator (??)
+    9. Optional Chaining (?.)
+    10. Type Operators (typeof, instanceof)
+    11. Bitwise Operators (Advanced)
+
+#### 1. Arithmetic Operators -
+        Used to perform mathematical operations.
+
+        P1 -    let a = 10;
+                let b = 3;
+
+                console.log("Addition:", a + b); Addition: 13
+                console.log("Subtraction:", a - b); Subtraction: 7
+                console.log("Multiplication:", a * b); Multiplication: 30
+                console.log("Division:", a / b); Division: 3.3333333333333335
+                console.log("Modulus:", a % b); Modulus: 1
+                console.log("Power:", a ** b); Power: 1000
+
+#### 2. Assignment Operators -
+        Used to assign values to variables.
+
+        P1 -    let a = 10;
+
+                a += 5;
+                console.log(a); //15
+                a -= 3;
+                console.log(a); //12
+                a *= 2;
+                console.log(a); //24
+                a /= 4;
+                console.log(a); //6
+                a %= 3;
+                console.log(a); //0
+
+#### 3. Comparison Operators -
+        Comparison operators always return a Boolean (true or false).
+
+        P1 -    let a = 10;
+                let b = "10";
+
+                console.log(a == b);  //true
+                console.log(a === b); //false
+                console.log(a != b);  //false
+                console.log(a !== b); //true
+                console.log(a > 5);   //true
+                console.log(a < 20);  //true
+
+#### 4. Logical Operators - 
+        Used to combine or invert Boolean values.
+
+#####   AND (&&)
+        Returns true only if both conditions are true.
+        P1 -    let age = 25;
+                let hasLicense = true;
+                console.log(age >= 18 && hasLicense); //true
+
+#####   OR (||)
+        Returns true if at least one condition is true.
+        P1 -    let isWeekend = false;
+                let isHoliday = true;
+                console.log(isWeekend || isHoliday); //true
+
+#####   NOT (!)
+        Reverses the Boolean value.
+        P1 -    let isLoggedIn = true;
+                console.log(!isLoggedIn); //false
+
+#### 5. Increment & Decrement Operators -
+
+#####   Increment (++)
+        Increases the value by 1.
+        P1 -    let a = 5;
+                a++;
+                console.log(a); //6
+
+#####   Decrement (--)
+        Decreases the value by 1.
+        P1 -    let a = 5;
+                a--;
+                console.log(a); //4
+
+#####   Prefix vs Postfix
+        Postfix
+        P1 -    let a = 5;
+                console.log(a++); //5
+                console.log(a);   //6
+
+        Prefix
+        P1 -    let a = 5;
+                console.log(++a); //6
+                console.log(a);   //6
+
+######  Easy way to remember:
+        a++ → Use the current value first, then increase it.
+        ++a → Increase the value first, then use it.
+
+####    7. Ternary Operator -
+        Short form of if...else.
+        Syntax - condition ? valueIfTrue : valueIfFalse;
+
+        P1 -  let age = 20;
+        let result = age >= 18 ? "Eligible to Vote" : "Not Eligible";
+        console.log(result); //Eligible to Vote
