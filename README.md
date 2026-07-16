@@ -48,17 +48,17 @@
     P2 - const country = "India";
          const country = "USA"; //SyntaxError
 
-## Which one should you use?
+### Which one should you use?
     1. Use const by default.
     2. Use let when the value needs to change.
     3. Avoid var in modern JavaScript unless you're maintaining older code.
 
-### Data Types
+## Data Types
 
-## What is a Data Type?
+### What is a Data Type?
     A data type tells JavaScript what kind of value is stored in a variable.
 
-## JavaScript Data Types
+### JavaScript Data Types
     JavaScript has 8 data types.
     They are divided into two categories:
 
