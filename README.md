@@ -62,4 +62,17 @@
     JavaScript has 8 data types.
     They are divided into two categories:
 
+### Primitive Data Types (7)
+    These store a single, simple value.
+    1. String
+    2. Number
+    3. Boolean
+    4. Undefined
+    5. Null
+    6. BigInt
+    7. Symbol
+
+### Non-Primitive (Reference) Data Type
+    1. Object
+    Arrays and functions are also objects in JavaScript.
   
