@@ -222,3 +222,5 @@
         P1 -  let age = 20;
         let result = age >= 18 ? "Eligible to Vote" : "Not Eligible";
         console.log(result); //Eligible to Vote
+
+        
