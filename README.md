@@ -222,3 +222,113 @@
         P1 -  let age = 20;
         let result = age >= 18 ? "Eligible to Vote" : "Not Eligible";
         console.log(result); //Eligible to Vote
+
+##      String
+
+###     What is a String?
+        A String is a sequence of characters used to store text.
+
+###     Ways to Create Strings
+        1. let name = "Tejas";
+        2. let name = 'Tejas';
+        3. let name = `Tejas`; //Template Literals (Backticks)
+
+        4. Using template literals:
+
+        let firstName = "Tejas";
+        let age = 23;
+        console.log(`My name is ${firstName} and I am ${age} years old.`);
+
+###     String Properties
+
+        1. length - Returns the number of characters.
+
+        P1 - let name = "JavaScript";
+             console.log(name.length); //10
+
+        2. Accessing Characters - Strings are zero-indexed.
+           J  a  v  a  S  c  r  i  p  t
+           0  1  2  3  4  5  6  7  8  9
+
+        P1 - let lang = "JavaScript";
+             console.log(lang[0]);  //J
+             console.log(lang[4]);  //s
+             console.log(lang[9]);  //t
+
+###    Common String Methods
+
+        1. toUpperCase() - Converts to uppercase.
+        
+        P1 - let name = "tejas";
+             console.log(name.toUpperCase()); //TEJAS
+
+        2. toLowerCase() - Converts to lowercase.
+
+        P1 - let name = "TEJAS";
+             console.log(name.toLowerCase()); //tejas
+
+        3. trim() - Removes spaces from both ends.
+
+        P1 - let name = "   Tejas   ";
+             console.log(name.trim());
+        
+        4. includes() - Checks whether a string contains another string.
+        
+        P1 - let message = "Welcome to JavaScript";
+             console.log(message.includes("Java")); //true
+        
+        5. startsWith() - 
+
+        P1 - let str = "JavaScript";
+             console.log(str.startsWith("Java")); //true
+        
+        6. endsWith() - 
+        
+        P1 - let str = "JavaScript";
+             console.log(str.endsWith("Script")); //true
+
+        7. indexOf() - Returns the first index of a character or substring.
+
+        P1 - let str = "JavaScript";
+             console.log(str.indexOf("S")); //4
+
+        8. lastIndexOf() - Returns the last occurrence.
+
+        P1 - let str = "banana";
+             console.log(str.lastIndexOf("a")); //5
+
+        9. slice() - Extracts part of a string.
+        
+        P1 - let str = "JavaScript";
+             console.log(str.slice(0, 4)); //Script
+        
+        10. substring() - Works similarly to slice() but doesn't support negative indexes.
+
+        P1 - let str = "JavaScript";
+             console.log(str.substring(4, 10)); //Script
+        
+        11. replace() - Replaces the first matching occurrence.
+        
+        P1 - let str = "Hello Java";
+             console.log(str.replace("Java", "PHP")); //Hello PHP
+        
+        12. replaceAll() - Replaces all matching occurrences.
+
+        P1 - let str = "Java Java Java";
+             console.log(str.replaceAll("Java", "PHP")); //PHP PHP PHP
+
+        13. split() - Converts a string into an array.
+
+        P1 - let str = "HTML,CSS,JavaScript";
+             console.log(str.split(",")); //["HTML", "CSS", "JavaScript"]
+
+        14. concat() - Joins strings.
+        
+        P1 - let first = "Tejas";
+             let last = "Gaikwad";
+             console.log(first.concat(" ", last)); //Tejas Gaikwad
+
+        15. charAt() - Returns the character at a given index.
+
+        P1 - let str = "JavaScript";
+             console.log(str.charAt(4)); //S
