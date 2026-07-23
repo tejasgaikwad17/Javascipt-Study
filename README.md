@@ -332,3 +332,104 @@
 
         P1 - let str = "JavaScript";
              console.log(str.charAt(4)); //S
+
+##      Arrays -
+
+###     What is an Array?
+        An Array is a special object used to store multiple values in a single variable.
+
+        P1 - let students = ["Tejas", "Rahul", "Amit", "Rohit"];
+             console.log(students);   // [ 'Tejas', 'Rahul', 'Amit', 'Rohit' ]
+
+###     Array Index
+        Arrays use zero-based indexing.
+        Fruit      Apple   Banana   Mango   Orange
+        Index        0        1        2        3
+
+        P1 - let fruits = ["Apple", "Banana", "Mango", "Orange"];
+             console.log(fruits[0]); //Apple
+             console.log(fruits[2]); //Mango
+
+        P2 - let fruits = ["Apple", "Banana", "Mango"];
+             fruits[1] = "Kiwi";
+             console.log(fruits); //[ 'Apple', 'Kiwi', 'Mango' ]
+
+###     Array length
+
+        P1 - let fruits = ["Apple", "Banana", "Mango"];
+             console.log(fruits.length); //3
+
+###     Arrays Can Store Different Data Types
+
+        P1 - let data = [
+                          "Tejas",
+                           23,
+                           true,
+                           null,
+                           { city: "Pune" },
+                           ["HTML", "CSS"]
+                        ];
+
+             console.log(data); //[ 'Tejas', 23, true, null, { city: 'Pune' }, [ 'HTML', 'CSS' ] ]
+
+###     Common Array Methods
+
+####    1. push() - Adds an element to the end.
+        P1 - let fruits = ["Apple", "Banana"];
+             fruits.push("Mango");
+             console.log(fruits); // [ 'Apple', 'Banana', 'Mango' ]
+
+####    2. pop() - Removes the last element.
+        P1 - let fruits = ["Apple", "Banana", "Mango"];
+             fruits.pop();
+             console.log(fruits); //[ 'Apple', 'Banana' ]
+
+####    3. unshift() - Adds an element at the beginning.
+        P1 - let fruits = ["Banana", "Mango"];
+             fruits.unshift("Apple");
+             console.log(fruits); //['Apple','Banana', 'Mango']
+
+####    4. shift() - Removes the first element.
+        P1 - let fruits = ["Apple", "Banana", "Mango"];
+             fruits.shift();
+             console.log(fruits); // ['Banana', 'Mango']
+
+####    5. indexOf() - Returns the index of an element.
+        P1 - let fruits = ["Apple", "Banana", "Mango"];
+             console.log(fruits.indexOf("Banana")); // 1
+
+####    6. includes() - Checks if an element exists.
+        P1 - let fruits = ["Apple", "Banana", "Mango"];
+             console.log(fruits.includes("Mango")); // true
+
+####    7. concat() - Joins two arrays.
+        P1 - let arr1 = [1, 2];
+             let arr2 = [3, 4];
+             let result = arr1.concat(arr2);
+             console.log(result); //[1, 2, 3, 4]
+
+####    8. slice() - Returns part of an array.
+        P1 - let numbers = [10, 20, 30, 40, 50];
+             console.log(numbers.slice(1, 4)); // [20, 30, 40]
+
+####    9. splice() - Adds or removes elements from the original array.
+        P1 - let numbers = [10, 20, 30, 40];
+             numbers.splice(1, 2);
+             console.log(numbers); //[10, 40]
+
+####    10. reverse() 
+        P1 - let numbers = [1, 2, 3];
+             console.log(numbers.reverse()); // [3, 2, 1]
+
+####    11. sort()
+        P1 - let fruits = ["Mango", "Apple", "Banana"];
+             console.log(fruits.sort()); // [ 'Apple', 'Banana', 'Mango' ]
+
+###     Loop Through an Array
+        P1 - let fruits = ["Apple", "Banana", "Mango"];
+             for (let i = 0; i < fruits.length; i++) {
+                  console.log(fruits[i]); // Apple
+             }                               Banana
+                                             Mango
+
+             
