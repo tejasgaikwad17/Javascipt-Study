@@ -432,4 +432,225 @@
              }                               Banana
                                              Mango
 
+##      Objects in JavaScript
+
+###     What is an Object?
+        An object is a collection of properties.
+
+        Each property has:
+        1. a key (property name)
+        2. a value
+
+        P1 - let student = {
+                              name: "Tejas",
+                              age: 23
+                           };
+        
+        Here:    name, age → key
+                "Tejas", 23 → value
+
+###     Why Use Objects?
+
+####    1. Without objects:
+           let name = "Tejas";
+           let age = 23;
+           let city = "Pune";
+
+####    2. With objects:
+           let student = {
+             name: "Tejas",
+             age: 23,
+             city: "Pune"
+           };
+
+###     Creating Objects
+
+####    Method 1: Object Literal (Most Common)
+
+        P1 - let employee = {
+                id: 101,
+                name: "Tejas",
+                salary: 45000
+             };
+             console.log(employee);
+
+####    Method 2: Using new Object()
+
+        P2 - let employee = new Object();
+             employee.id = 101;
+             employee.name = "Tejas";
+             employee.salary = 45000;
+             console.log(employee);
+
+###     Accessing Object Properties
+
+####    Dot Notation
+
+        P1 - let student = {
+                name: "Tejas",
+                age: 23
+             };
+
+             console.log(student.name); //Tejas
+             console.log(student.age);  //23
+
+####    Bracket Notation
+
+        P1 - let student = {
+                name: "Tejas",
+                age: 23
+             };
+
+             console.log(student["name"]); //Tejas
+             console.log(student["age"]);  //23
+
+####    When to use bracket notation?
+        When the property name is dynamic.
+
+        P1 - let key = "name";
+             console.log(student[key]); //Tejas
+
+####    Adding Properties
+        P1 - let student = {
+                name: "Tejas"
+             };
+
+             student.age = 23;
+             student.city = "Pune";
+             console.log(student); //{ name: 'Tejas', age: 23, city: 'Pune' }
+
+####    Updating Properties
+        P1 - let student = {
+                name: "Tejas",
+                age: 23
+             };
+
+             student.age = 24;
+             console.log(student); //{name: "Tejas", age: 24}
+
+####    Deleting Properties
+        P1 - let student = {
+                name: "Tejas",
+                age: 23,
+                city: "Pune"
+             };
+
+             delete student.city;
+             console.log(student); // {name: "Tejas", age: 23}
+
+###     Object Methods
+        Functions inside objects are called methods.
+
+        P1 - let student = {
+                name : "Tejas",
+                age : 32,
+                greet : function() {
+                        console.log("Hello, My name is " + this.name)
+                }
+             }
+             student.greet() //Hello, My name is Tejas
+
+####    this
+        this refers to the current object.
+
+###     Nested Objects
+        Objects can contain other objects.
+
+        P1 - let student = {
+                name: "Tejas",
+                age: 23,
+
+             address: {
+                city: "Pune",
+                state: "Maharashtra"
+              }
+        };
+
+        console.log(student.address.city);  //Pune
+        console.log(student.address.state); //Maharashtra
+
+###     Object with Array
+
+        P1 - let student = {
+                name: "Tejas",
+                skills: ["HTML", "CSS", "JavaScript"]
+             };
+             console.log(student.skills[0]); //HTML
+             console.log(student.skills[2]); //JavaScript
+
+###     Arrays of object 
+        Very common in real projects.
+
+        P1 - let employees = [
+                { id: 1, name: "Tejas" },
+                { id: 2, name: "Rahul" },
+                { id: 3, name: "Amit" }
+             ];
+             console.log(employees[1].name); // Rahul
+
+###     Looping Through an Object
+        for...in
+
+        P1 - let student = {
+                name: "Tejas",
+                age: 23,
+                city: "Pune"
+             };
+
+             for (let key in student){
+                console.log(key, ":" student[key])
+             }        
+             // name : Tejas
+                age : 23
+                city : Pune
+
+###     Important Object Methods
+
+####    Object.keys()
+
+        P1 - let student = {
+                name: "Tejas",
+                age: 23
+             };
+             console.log(Object.keys(student)); // [ 'name', 'age' ]  - square braket because it retuns in the array format
+
+####    Object.values()
+
+        P1 - let student = {
+                name: "Tejas",
+                age: 23
+             };
+             console.log(Object.values(student)); //[ 'Tejas', 23 ]
+
+####    Object.entries()
+
+        P1 - let student = {
+                name: "Tejas",
+                age: 23
+             };
+             console.log(Object.entries(student)); //[ [ 'name', 'Tejas' ], [ 'age', 23 ] ]
+
+###     Object Destructuring (ES6)
+        Extract properties into variables.
+
+        P1 - let student = {
+                name: "Tejas",
+                age: 23,
+                city: "Pune"
+             };
+
+             let { name, age } = student;
+             console.log(name); //Tejas
+             console.log(age);  //23
+
+###     Object Reference Behavior
+        Objects are stored by reference.
+
+        P1 - let obj1 = { name: "Tejas" };
+             let obj2 = obj1;
              
+             obj2.name = "Rahul";
+             
+             console.log(obj1.name); //Rahul
+             console.log(obj2.name); //Rahul
+
