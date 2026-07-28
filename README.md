@@ -654,6 +654,7 @@
              console.log(obj1.name); //Rahul
              console.log(obj2.name); //Rahul
 
+
 ##      Functions in JavaScript
         A function is a reusable block of code that performs a specific task.
 
@@ -747,6 +748,5 @@
                         console.log(b); //20
                 }
                 console.log(a); //ReferenceError: a is not defined
-
 
 
