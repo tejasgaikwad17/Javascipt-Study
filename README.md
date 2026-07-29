@@ -747,4 +747,10 @@
                         console.log(a); //10
                         console.log(b); //20
                 }
+<<<<<<< HEAD
                 console.log(a); //ReferenceError: a is not defined
+=======
+                console.log(a); //ReferenceError: a is not defined
+
+
+>>>>>>> dfa1cae8275295d938f579af8c987b7fd139b604
