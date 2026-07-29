@@ -654,3 +654,97 @@
              console.log(obj1.name); //Rahul
              console.log(obj2.name); //Rahul
 
+
+##      Functions in JavaScript
+        A function is a reusable block of code that performs a specific task.
+
+        P1 - function greet() {
+                console.log("Hello Tejas");
+             }
+        greet(); //Hello Tejas
+
+###     Functions with parameter
+
+        P1 - function greet(name) {
+                     console.log("Hello " + name);
+                  }
+
+             greet("Tejas"); //Hello Tejas
+             greet("Rahul"); //Hello Rahul
+
+        Here name is a parameter, and "Tejas" is an argument.
+
+###     Function Returning a Value
+
+        P1 - function add(a, b) {
+                return a + b;
+             }
+
+             let result = add(10, 20);
+             console.log(result); //30
+
+###     Arrow Function (ES6)
+
+        P1 - const subtract = (a, b) => {
+                  return a - b;
+                };
+             console.log(subtract(10, 3)); //7
+
+###     Anonymous Function
+        The function has no name.
+
+        P1 - setTimeout(function() {
+                        console.log("Executed after 1 second");
+                }, 1000);
+
+###     Callback Function
+
+        P1 - function calculate(a, b, operation) {
+                         return operation(a, b);
+                      }
+
+             function add(x, y) {
+                        return x + y;
+                     }
+
+             console.log(calculate(5, 3, add)); //8
+
+##      Function Scope vs Global Scope
+
+###     What is Scope?
+        Scope determines where a variable can be accessed.
+        There are three main scopes:
+        1. Global Scope
+        2. Function Scope
+        3. Block Scope
+
+###     1. Global Scope
+        Global variables are accessible everywhere.
+
+        P1 - let globalVar = "I am global"
+             function test() {
+                console.log(globalVar)
+             }
+             test() //I am global
+             console.log(globalVar) //I am global
+
+###     2. Function Scope
+
+        P1 - function test() {
+                                let localVar = "I am local";
+                                console.log(localVar);
+                        }
+             test(); //I am local
+             console.log(localVar); //ReferenceError: localVar is not defined
+
+###     3. Block Scope (`let` and `const`)
+        let and const are block-scoped.
+
+        P1 - if (true) {
+                        let a = 10;
+                        const b = 20;
+
+                        console.log(a); //10
+                        console.log(b); //20
+                }
+                console.log(a); //ReferenceError: a is not defined
