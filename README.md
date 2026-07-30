@@ -748,3 +748,131 @@
                         console.log(b); //20
                 }
                 console.log(a); //ReferenceError: a is not defined
+
+##      Control Flow in JavaScript
+
+###     What is Conditional Flow?
+        Conditional flow means executing different code based on a condition.
+
+        Real-life example:
+        1. If it is raining → take an umbrella.
+        2. If marks are above 35 → pass.
+        3. If age is 18 or more → eligible to vote.
+
+        In JavaScript, conditions usually return true or false.
+
+###     1. if Statement
+
+        Syntax -    if (condition) {
+                // code runs if condition is true
+                }
+
+        P1 - let age = 20;
+             if (age >= 18) {
+                console.log("Eligible to vote");
+             } // Eligible to 
+             
+###     2. if...else
+        Use when you have two possible outcomes.
+
+        P1 -  let age = 16;
+
+              if (age >= 18) {
+                console.log("Eligible to vote");
+              } else {
+                console.log("Not eligible to vote"); //Not eligible to vote
+              }
+
+###     if...else if...else
+        Use when there are multiple conditions.
+
+        P1 - let marks = 82;
+
+             if (marks >= 90) {
+                console.log("Grade A+");
+             } else if (marks >= 75) {
+                console.log("Grade A"); //s Grade A
+             } else if (marks >= 60) {
+                console.log("Grade B");
+             } else if (marks >= 35) {
+                console.log("Grade C");
+             } else {
+                console.log("Fail");
+             } 
+
+###     4. Nested if
+        An if inside another if.
+
+        P1 -    let age = 22;
+                let hasLicense = true;
+
+                if (age >= 18) {
+                if (hasLicense) {
+                        console.log("You can drive"); //You can drive
+                } else {
+                        console.log("Get a driving license first");
+                }
+                } else {
+                console.log("You are too young to drive");
+                }
+
+###     5. Ternary Operator
+        Short form of if...else.
+
+        Syntax - condition ? valueIfTrue : valueIfFalse;
+
+        P1 -    let age = 20;
+                             -condition- -true-    -false-
+                let result = age >= 18 ? "Adult" : "Minor";
+
+                console.log(result); // Adult
+
+###     6. switch Statement
+        Use when comparing one value against many options.
+
+        Syntax - switch (value) {
+                      case option1:
+                      // code
+                      break;
+
+                      case option2:
+                      // code
+                      break;
+
+                      default:
+                      // code
+                }
+
+        P1 - let day = 3;
+
+                switch (day) {
+                        case 1:
+                        console.log("Monday");
+                        break;
+
+                        case 2:
+                        console.log("Tuesday");
+                        break;
+
+                        case 3:
+                        console.log("Wednesday"); //Wednesday
+                        break;
+
+                        default:
+                        console.log("Invalid day");
+                }
+        
+####    Why break is Important
+        Without break, execution continues into the next case.
+
+        P1 - let day = 1;
+
+                switch (day) {
+                                case 1:
+                                console.log("Monday");
+
+                                case 2:
+                                console.log("Tuesday");
+                }
+        OP - Monday
+             Tuesday
