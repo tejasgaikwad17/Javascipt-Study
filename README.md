@@ -876,3 +876,125 @@
                 }
         OP - Monday
              Tuesday
+
+##      Loops in JavaScript
+
+###     What is a Loop?
+        A loop repeatedly executes a block of code until a condition becomes false.
+
+        Without a loop
+        console.log(1);
+        console.log(2);
+        console.log(3);
+        console.log(4);
+        console.log(5);
+
+        With a loop
+        for (let i = 1; i <= 5; i++) {
+           console.log(i);
+        }
+
+        Output:
+        1
+        2
+        3
+        4
+        5
+
+        Notice how only three lines of code print five numbers.
+
+###     Types of Loops in JavaScript
+        1. for
+        2. while
+        3. do...while
+        4. for...of
+        5. for...in
+
+###     1. for Loop
+        
+        Syntax - 
+        for (initialization; condition; update)
+         { // code }
+
+        Example - 
+        for (let i = 1; i <= 5; i++) 
+        { console.log(i); }
+
+        Output:
+        2
+        4
+        6
+        8
+        10
+
+###     2. while Loop
+        Used when the number of iterations is not known in advance.
+
+        Syntax -
+        while (condition) 
+        { // code }
+
+        Example
+        let i = 1;
+        while (i <= 5) { 
+                console.log(i);
+                i++; 
+            } // 1 to 5
+        
+###     3. do...while Loop
+        Executes the code at least once, even if the condition is false.
+
+        Syntax - 
+        do { 
+                // code
+           } while (condition);
+        
+        Example - 
+        let i = 1;
+        do { 
+              console.log(i);
+              i++; 
+           } while (i <= 5); // 1 to 5
+        
+###     4. break
+        Stops the loop immediately.
+
+        for (let i = 1; i <= 10; i++) {
+                if (i === 5) {
+                        break;
+                  }
+                 console.log(i); // 1 to 5
+               }
+
+###     5. continue
+        Skips the current iteration.
+
+        for (let i = 1; i <= 5; i++) {
+                 if (i === 3) {
+                         continue; 
+                         } 
+                         console.log(i); 
+                         } // 1 to 5
+
+###     6. Nested Loops
+        A loop inside another loop.
+
+        Multiplication Table
+
+        for (let i = 1; i <= 3; i++) {
+                for (let j = 1; j <= 3; j++) {
+                        console.log(i + " x " + j + " = " + i * j);
+                        }
+                }
+        
+        Output:
+
+        1 x 1 = 1
+        1 x 2 = 2
+        1 x 3 = 3
+        2 x 1 = 2
+        2 x 2 = 4
+        2 x 3 = 6
+        3 x 1 = 3
+        3 x 2 = 6
+        3 x 3 = 9
