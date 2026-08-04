@@ -998,3 +998,50 @@
         3 x 1 = 3
         3 x 2 = 6
         3 x 3 = 9
+
+
+##      What is forEach()?
+
+        forEach() is an array method used to execute a function once for each element in an array.
+
+        Think of it as a cleaner alternative to a for loop when you only want to visit each element.
+
+        Syntax - 
+
+        array.forEach(function(element, index, array) {
+            // code
+        });
+
+        1. element → current item
+        2. index → position of the item
+        3. array → the original array
+
+###     Example 1: Print Array Elements
+
+        let fruits = ["Apple", "Banana", "Mango"];
+
+        fruits.forEach(function(fruit) {
+        console.log(fruit);
+        });
+        Output
+        Apple
+        Banana
+        Mango
+
+        This does the same work as:
+
+        for (let i = 0; i < fruits.length; i++) {
+        console.log(fruits[i]);
+        }
+
+###     Example 2: Using Arrow Function
+        
+        let fruits = ["Apple", "Banana", "Mango"];
+
+        fruits.forEach((fruit) => {
+        console.log(fruit);
+        });
+
+        Shorter syntax:
+
+        fruits.forEach(fruit => console.log(fruit));
