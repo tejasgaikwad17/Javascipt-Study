@@ -1045,3 +1045,123 @@
         Shorter syntax:
 
         fruits.forEach(fruit => console.log(fruit));
+
+##      map()
+
+        What is map()?
+        map() is an array method that creates a new array by applying a function to every element of the original array.
+
+        Syntax -
+        array.map(function(element, index, array) {
+                return transformedValue;
+        });
+        element → current item
+        index → position
+        array → original array
+        return → value that goes into the new array
+
+###     Example 1: Double Numbers
+        let numbers = [1, 2, 3, 4];
+
+        let doubled = numbers.map(function(num) {
+        return num * 2;
+        });
+
+        console.log(doubled);
+        console.log(numbers);
+        Output
+        [2, 4, 6, 8]
+        [1, 2, 3, 4]
+
+        Notice:
+
+        doubled is a new array.
+        numbers remains unchanged.
+
+##      filter()
+
+        What is filter()?
+        filter() is an array method that creates a new array containing only the elements that satisfy a condition.
+
+        Syntax -
+        array.filter(function(element, index, array) {
+                return condition;
+        });
+        element → current item
+        index → position
+        array → original array
+        Must return true or false
+        true → keep the element
+        false → discard the element
+
+###     Example 1: Filter Even Numbers
+        let numbers = [1, 2, 3, 4, 5, 6];
+
+        let evenNumbers = numbers.filter(function(num) {
+        return num % 2 === 0;
+        });
+
+        console.log(evenNumbers);
+        console.log(numbers);
+        Output
+        [2, 4, 6]
+        [1, 2, 3, 4, 5, 6]
+
+        Notice that the original array is not modified.
+
+##      reduce()
+
+        What is reduce()?
+        reduce() is used to reduce an entire array into a single value.
+
+
+        Syntax
+        array.reduce((accumulator, currentValue) => {
+        return updatedAccumulator;
+        }, initialValue);
+
+        Parameters
+        Parameter :	|  Meaning :
+        accumulator	|  Stores the running result
+        currentValue	|  Current array element
+        initialValue	|  Starting value
+
+        Examples:
+
+        Sum of all numbers
+        Product of all numbers
+        Maximum value
+        Minimum value
+        Count occurrences
+        Group data
+        Build objects from arrays
+
+        Think of it like this:
+
+        [1, 2, 3, 4, 5]
+                ↓
+        reduce
+                ↓
+        15
+
+        Many values become one value.
+
+###     Example 1: Sum of Numbers
+        let numbers = [1, 2, 3, 4, 5];
+
+        let sum = numbers.reduce((acc, curr) => {
+        return acc + curr;
+        }, 0);
+
+        console.log(sum);
+        Output
+        15
+
+##      forEach() vs map() vs filter() vs reduce()
+
+        Method	    |           Purpose	                 |          Returns
+        forEach()	        Perform action	                    undefined
+        map()	                Transform data	                    New array
+        filter()	        Select data	                    New array
+        reduce()	        Combine data	                    Single value
+
