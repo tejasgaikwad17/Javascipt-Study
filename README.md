@@ -1165,3 +1165,159 @@
         filter()	        Select data	                    New array
         reduce()	        Combine data	                    Single value
 
+#       DOM - DOM (Document Object Model)
+
+##      Step 1: Create an HTML file
+        Create a file named index.html.
+        <!DOCTYPE html>
+        <html>
+        <title>DOM Practice</title> 
+        </head> 
+        <body> 
+
+        <h1 id="title">Hello DOM</h1> 
+        <p class="text">First paragraph</p> 
+        <p class="text">Second paragraph</p> 
+
+        <button id="btn">Change Text</button> 
+
+        <script src="script.js"></script> 
+        </body> 
+        </html>
+
+##      Step 2: Create JavaScript file
+        Create script.js in the same folder.
+
+        console.log("JavaScript Connected");
+
+        Open index.html in Chrome and press F12 → Console. You should see:
+
+        JavaScript Connected
+
+        Now JavaScript is connected to the web page.
+
+##      Selecting Elements
+###     1. Select by ID
+        let heading = document.getElementById("title"); 
+        console.log(heading);
+
+###     2. Select by Class
+        let paragraphs = document.getElementsByClassName("text");
+
+        console.log(paragraphs);
+
+        This returns an HTMLCollection containing both paragraphs.
+
+###     3. Select by Tag
+        let p = document.getElementsByTagName("p");
+
+        console.log(p);
+
+###     4. Modern Selectors
+        let firstPara = document.querySelector(".text");
+
+        console.log(firstPara);
+
+        Returns the first matching element.
+
+        let allPara = document.querySelectorAll(".text");
+
+        console.log(allPara);
+
+        Returns all matching elements as a NodeList.
+
+###     Reading Text
+        let heading = document.getElementById("title");
+
+        console.log(heading.innerText);
+
+        Output:
+        Hello DOM
+
+###     Changing Text
+        heading.innerText = "Hello Tejas";
+
+        The page immediately changes to:
+
+        <h1 id="title">Hello Tejas</h1>  
+
+###     Changing HTML
+        heading.innerHTML = "<span style='color:red'>Red Text</span>";
+
+        Now the heading becomes red.
+
+###     Changing Styles
+        heading.style.color = "blue";
+        heading.style.backgroundColor = "yellow";
+        heading.style.fontSize = "40px";
+
+        Notice:
+
+        background-color in CSS becomes backgroundColor in JavaScript.
+
+###     Button Click Example
+
+        Replace script.js with:
+
+        let heading = document.getElementById("title");
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener("click", function() {
+        heading.innerText = "Button Clicked!";
+        heading.style.color = "green";
+        });
+        What happens?
+
+        When you click the button:
+
+        Text changes to Button Clicked!
+        Color changes to green
+
+        This is your first interactive web page.
+
+###     Loop Through Multiple Elements
+        let paras = document.querySelectorAll(".text");
+
+        paras.forEach(function(p) {
+        console.log(p.innerText);
+        });
+
+        Output:
+
+        First paragraph
+        Second paragraph
+
+###     Change All Paragraph Colors
+        paras.forEach(function(p) {
+        p.style.color = "purple";
+        });
+
+        All paragraphs become purple.
+
+###     Create a New Element
+        let newPara = document.createElement("p");
+
+        newPara.innerText = "I was created by JavaScript";
+
+        document.body.appendChild(newPara);
+
+        A new paragraph appears at the bottom of the page.
+
+###     Remove an Element
+        newPara.remove();
+
+        The paragraph disappears.
+        
+##      Most Important DOM Methods
+
+        | Method           | Purpose                |
+        | ---------------- | ---------------------- |
+        | getElementById   | Select by id           |
+        | querySelector    | First matching element |
+        | querySelectorAll | All matching elements  |
+        | createElement    | Create element         |
+        | appendChild      | Add element            |
+        | remove           | Remove element         |
+        | addEventListener | Listen for events      |
+
+        Memorize these six methods.
