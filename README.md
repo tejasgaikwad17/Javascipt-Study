@@ -1321,3 +1321,129 @@
         | addEventListener | Listen for events      |
 
         Memorize these six methods.
+
+#       DOM Events
+
+##      What is an Event?
+        An event is an action that happens in the browser.
+
+        Examples:
+
+        1.      User clicks a button → click
+        2.      User types in an input → input
+        3.      User presses a keyboard key → keydown
+        4.      Mouse enters an element → mouseover
+        5.      Form is submitted → submit
+
+        JavaScript can listen for these events and execute code when they happen.
+
+##      1. addEventListener()
+        The most important way to handle events.
+
+        Syntax 
+        element.addEventListener("event", function() {
+                // code
+        });
+
+##      2. Click Event
+        This is probably the most commonly used event.
+
+        let btn = document.getElementById("btn");
+                btn.addEventListener("click", function() {
+                alert("Button clicked!");
+        });
+
+##      3. Event with DOM Manipulation
+        
+        <h1 id="title">Hello</h1>
+        <button id="btn">Change</button>
+
+        let title = document.getElementById("title");
+                let btn = document.getElementById("btn");
+
+                btn.addEventListener("click", function() {
+                title.innerText = "Hello Tejas!";
+        });
+
+##      4. Mouse Events
+        Some important mouse events:
+
+        | Event       | Meaning               |
+        | ----------- | --------------------- |
+        | `click`     | Mouse click           |
+        | `dblclick`  | Double click          |
+        | `mouseover` | Mouse enters element  |
+        | `mouseout`  | Mouse leaves element  |
+        | `mousedown` | Mouse button pressed  |
+        | `mouseup`   | Mouse button released |
+        | `mousemove` | Mouse moves           |
+
+
+        example -
+
+        let box = document.getElementById("box");
+                box.addEventListener("mouseover", function() {
+                console.log("Mouse entered!");
+        });
+
+##      5. Keyboard Events
+        Important keyboard events:
+
+        | Event      | Meaning                      |
+        | ---------- | ---------------------------- |
+        | `keydown`  | Key is pressed               |
+        | `keyup`    | Key is released              |
+        | `keypress` | Older event; generally avoid |
+
+##      6. Detect Which Key Was Pressed
+        This is where the event object becomes important.
+
+        document.addEventListener("keydown", function(event) {
+            console.log(event.key);
+        });        
+
+##      7. event Object
+        The browser automatically gives information about the event to your function.
+
+        document.addEventListener("click", function(event) {
+                console.log(event);
+        });
+
+        event.target
+        event.type
+        event.clientX
+        event.clientY
+
+##      8. event.target
+        event.target tells you which element triggered the event.
+
+        <button id="btn">Click Me</button>
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener("click", function(event) {
+                console.log(event.target);
+        });
+
+        Click Me
+
+##      9. Input Event
+        Very important for forms and search boxes.
+
+        <input id="username" type="text">
+        let input = document.getElementById("username");
+
+                input.addEventListener("input", function(event) {
+                console.log(event.target.value);
+        });
+
+        If you type:
+
+        Tejas
+
+        Console will show:
+
+        T
+        Te
+        Tej
+        Teja
+        Tejas
