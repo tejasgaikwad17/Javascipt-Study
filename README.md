@@ -1437,11 +1437,9 @@
         });
 
         If you type:
-
         Tejas
 
         Console will show:
-
         T
         Te
         Tej
