@@ -1428,7 +1428,7 @@
 
 ##      9. Input Event
         Very important for forms and search boxes.
-
+0
         <input id="username" type="text">
         let input = document.getElementById("username");
 
