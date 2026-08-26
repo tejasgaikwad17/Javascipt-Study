@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tejas - Javascript</h1>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const text = function(hi){
+        console.log('Tejas Gaikwad' , hi, Date.now());
+    }
+
+    const clearInt = setInterval(text, 1000, 'hi')
+
+    clearInterval(clearInt)
+
+    // const textChange = function () { document.querySelector('h1').innerHTML= 'Tejas Gaikwad'}
+
+    // const setTimOut = setTimeout(textChange, 2000)
+
+    let setTimOut;
+
+    document.querySelector('#start').addEventListener('click', function(){
+        const textChange = function () { document.querySelector('h1').innerHTML= 'Tejas Gaikwad'}
+        setTimOut = setTimeout(textChange, 2000)
+        console.log('Change started');
+        
+    })
+
+        document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(setTimOut)
+        console.log('Change Stopped');     
+    })
+
+</script>   
+</html>
