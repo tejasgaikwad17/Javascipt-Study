@@ -1513,4 +1513,65 @@
 ###     reject()
         Used when the operation fails.
 
-        
+##      Consuming a Promise
+        We commonly use:
+        .then()
+        .catch()
+
+        Example:
+
+        promise
+        .then(function(result) {
+                console.log(result);
+        })
+        .catch(function(error) {
+                console.log(error);
+        });
+
+        If successful:
+
+        Operation successful!
+
+        If failed:
+
+        Operation failed!
+
+###     then()
+        .then() executes when the Promise is fulfilled.
+
+        promise.then(function(result) 
+                { console.log(result);
+                });
+
+        The value passed to resolve() becomes the value received by .then().
+
+        Example:
+        let promise = new Promise(function(resolve, reject) 
+                { resolve("Hello Tejas"); });
+        promise.then(function(message) 
+                { console.log(message); });
+
+        Output:
+        Hello Tejas
+
+##      catch()
+        .catch() handles a rejected Promise.
+
+        let promise = new Promise(function(resolve, reject) {
+                 reject("Something went wrong"); 
+        });
+
+##      finally()
+        finally() runs whether the Promise succeeds or fails.
+
+        promise 
+        .then(result => 
+                { 
+                  console.log(result); 
+                }) 
+                .catch(error => {
+                  console.log(error);
+                })
+                .finally(() => {
+                  console.log("Operation completed"); 
+                });
